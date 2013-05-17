@@ -1,0 +1,21 @@
+!!!
+/[if lt IE 7 ] <html class="ie6" lang="en">
+/[if IE 7 ]    <html class="ie7" lang="en">
+/[if IE 8 ]    <html class="ie8" lang="en">
+/[if IE 9 ]    <html class="ie9" lang="en">
+%html
+
+  %head
+    :Asseturl
+      %link{:href => "normalize.css", :rel => "stylesheet", :type => "text/css"}
+    :Asseturl
+      %link{:href => "app.css", :rel => "stylesheet", :type => "text/css"}
+    = yield :title
+
+  %body
+    = yield
+
+    :Asseturl
+      %script{:src => "custom.modernizr.js"}
+    :Asseturl
+      %script{:src => "jquery-1.9.1.js"}
