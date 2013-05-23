@@ -3,7 +3,7 @@
 /[if IE 7 ]    <html class="ie7" lang="en">
 /[if IE 8 ]    <html class="ie8" lang="en">
 /[if IE 9 ]    <html class="ie9" lang="en">
-%html
+%html{"ng-app" => ""}
 
   %head
     :Asseturl
@@ -16,6 +16,5 @@
     = yield
 
     :Asseturl
-      %script{:src => "custom.modernizr.js"}
-    :Asseturl
-      %script{:src => "jquery-1.9.1.js"}
+      %script{:src => "main.js"}
+    %script{:src => "https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js", :type => "text/javascript"}
