@@ -10,7 +10,7 @@
   "preprocessorScriptOutput": "assets/js",
   "preprocessorStyleOutput": "assets/css",
   "projectDescription": "The most advanced responsive front-end framework in the world.",
-  "projectName": "Mixture-boilerplate",
+  "projectName": "Mixture-boilerplate-haml-sass",
   "publishedId": "2901",
   "remoteDebugPort": 0,
   "routes": null,
