@@ -9,7 +9,10 @@
       %small Sass + Haml + Angular
 .row
   .large-8.columns
-    %h3 Documentation Name
-    %p Documentation information on the boilerplate might go here. Info on where to use Sass + Haml + Angular together. This info may be in the README as well, or it could be here for an initial boiler plate introduction.
+    %p This is a boilerplate for the Mixture site generation tool. It's set up using Haml and Sass for easy to read, quickly written HTML and CSS, and it's integrated with AngularJS for quickly defined dynamic data. Also integrated are Modernizr, Foundation, and of course JQuery.
     =render :links
-=render :ng_hello
+    =render :mixture_json_syntax
+
+.row
+  .large-4.columns
+    =render :ng_hello
