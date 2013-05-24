@@ -32,6 +32,7 @@ To call data from an array from a JSON file, it works just like any array.
 While a regular Mixture liquid file uses the {% %} syntax, it is not yet supported in haml. But we can always use Ruby for that. For instance you could loop through some of our JSON data like this:
 
 `- for x in #{model["team"]}`
+
 `  #{x["name"]}`
 
 Angular
