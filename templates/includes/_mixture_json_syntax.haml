@@ -1,0 +1,26 @@
+%h3 Mixture JSON Syntax
+%p To access JSON data within Mixture, simply create your JSON file inside the models folder. There is a global file for global data, or you can create your own JSON file for a specific page. The file must be the same name as the haml file.
+%p
+  To call data from your page's specific JSON file use the syntax
+  %br
+  %code
+    %span &#35;{model["description"]}
+%p
+  To call data from the global JSON file use the syntax
+  %br
+  %code
+    %span &#35;{global["description"]}
+%p
+  To call data from an array from a JSON file, it works just like any array.
+  %br
+  %code
+    %span &#35;{model["team"][0]["name"]}
+%p
+  While a regular Mixture liquid file uses the
+  %code {% %}
+  syntax, it is not yet supported in haml. But we can always use Ruby for that. For instance you could loop through some of our JSON data like this:
+  %br
+  %code
+    &#45; for x in &#35;{model["team"]}
+    %br
+    %span &nbsp; &#35;{x["name"]}
