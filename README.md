@@ -31,9 +31,11 @@ For calling data deeper in the JSON file you can target specific data this way:
 
 While a regular Mixture liquid file uses the `{% %}` syntax, it is not yet supported in haml. But we can always use Ruby for that. For instance you could loop through some of our JSON data like this:
 
-`- for x in #{model["departments"]}`
+```
+- for x in #{model["departments"]}
 
-`  #{x[1]}`
+  #{x[1]}
+```
 
 Notice that when displaying JSON data using variables in ruby blocks, you'll use array syntax to target names and values.
 
