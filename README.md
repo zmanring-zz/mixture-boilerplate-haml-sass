@@ -33,7 +33,6 @@ While a regular Mixture liquid file uses the `{% %}` syntax, it is not yet suppo
 
 ```
 - for x in #{model["departments"]}
-
   #{x[1]}
 ```
 
