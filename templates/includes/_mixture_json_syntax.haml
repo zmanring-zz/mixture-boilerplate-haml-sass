@@ -1,26 +1,86 @@
 %h3 Mixture JSON Syntax
-%p To access JSON data within Mixture, simply create your JSON file inside the models folder. There is a global file for global data, or you can create your own JSON file for a specific page. The file must be the same name as the haml file.
+%p To access JSON data within Mixture, simply create your JSON file inside the models folder. There is a global file for global data, or you can create your own JSON file for a specific page. The file for the local page must be the same name as the haml file. The global JSON filename should always start with an underscore.
 %p
-  To call data from your page's specific JSON file use the syntax
+  To call data from your page's specific JSON file use the syntax:
   %br
   %code
-    %span &#35;{model["description"]}
+    %span &#35;{model["company_name"]}
 %p
-  To call data from the global JSON file use the syntax
+  To call data from the global JSON file use the syntax:
   %br
   %code
-    %span &#35;{global["description"]}
+    %span &#35;{global["company_name"]}
 %p
-  To call data from an array from a JSON file, it works just like any array.
+  For calling data deeper in the JSON file you can target specific data this way:
   %br
   %code
-    %span &#35;{model["team"][0]["name"]}
+    %span &#35;{model["departments"]["creative"]}
 %p
   While a regular Mixture liquid file uses the
   %code {% %}
   syntax, it is not yet supported in haml. But we can always use Ruby for that. For instance you could loop through some of our JSON data like this:
   %br
   %code
-    &#45; for x in &#35;{model["team"]}
+    &#45; for x in &#35;{model["departments"]}
     %br
-    %span &nbsp; &#35;{x["name"]}
+    %span &nbsp; &#35;{x[1]}
+%p
+  Notice that when displaying JSON data using variables in ruby blocks, you'll use array syntax to target names and values.
+  %br
+  %code
+    %span &nbsp; &#35;{x[0]} &nbsp; &#35;{x[1]}
+%p
+  If you call JSON objects in mixture directly from HAML you can ignore the
+  %code &#35;{}
+  &#46;
+  %br
+  %code
+    %span global["company_name"]
+%p Using the following HAML:
+%pre.panel
+  :preserve
+    %section.panel
+      %p
+        Our company name is &#35;{model["company_name"]}.
+        A few of our departments are:
+      &#45; for x in model["departments"]
+        %p &#35;{x[1]}
+
+    %section.panel
+      %p We are &#35;{global["company_name"]}, we are an
+         &#35;{global["company_type"]}. We're located in
+         &#35;{global["location"]["city"]},
+         &#35;{global["location"]["state"]}.
+%p With the following JSON files:
+%pre.panel
+  :preserve
+    <strong>index.json</strong><hr>
+    {
+      "company_name": "Maxmedia",
+      "departments": {
+        "tech": "Technology",
+        "creative": "Creative",
+        "strat": "Strategy"
+      }
+    }
+%pre.panel
+  :preserve
+    <strong>_global.json</strong><hr>
+    {
+      "company_name": "Maxmedia",
+      "company_type": "agency",
+      "location": {
+        "city": "Atlanta",
+        "state": "Georgia"
+      }
+    }
+%p Will output the following:
+%section.panel
+  %p
+    Our company name is #{model["company_name"]}.
+    A few of our departments are:
+  - for x in model["departments"]
+    %p #{x[1]}
+
+%section.panel
+  %p We are #{global["company_name"]}, we are an #{global["company_type"]}. We're located in #{global["location"]["city"]}, #{global["location"]["state"]}.

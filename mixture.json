@@ -1,10 +1,10 @@
 {
   "convertHtmlOutput": null,
   "customRubyPath": null,
-  "debug": false,
+  "debug": true,
   "domain": null,
   "followLeader": false,
-  "lintScripts": true,
+  "lintScripts": false,
   "modelSource": "",
   "preprocessorLocations": "assets",
   "preprocessorScriptOutput": "assets/js",
