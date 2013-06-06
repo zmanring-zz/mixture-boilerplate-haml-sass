@@ -1,0 +1,8 @@
+{
+  "company_name": "Maxmedia",
+  "departments": {
+    "tech": "Technology",
+    "creative": "Creative",
+    "strat": "Strategy"
+  }
+}

@@ -1,3 +1,8 @@
 {
-	"version": "4.0.9"
+  "company_name": "Maxmedia",
+  "company_type": "agency",
+  "location": {
+    "city": "Atlanta",
+    "state": "Georgia"
+  }
 }
