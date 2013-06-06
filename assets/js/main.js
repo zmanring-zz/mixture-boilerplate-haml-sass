@@ -28173,7 +28173,7 @@ angular.element(document).find('head').append('<style type="text/css">@charset "
 
 var app = angular.module('MaxmediaApp', []);
 
-app.controller('ExampleCtrl', ['$scope', FirstCtrl]);
+app.controller('ExampleCtrl', ['$scope', ExampleCtrl]);
 
 function ExampleCtrl($scope) {
 
