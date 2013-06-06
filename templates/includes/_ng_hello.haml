@@ -1,9 +1,10 @@
 %h3 Angular Example
-%p
-  Here is a small example on dynamic data with Angular, more info can be found at
-  %a{:href => "http://angularjs.org"} AngularJS.org
-%div
-  %label Name:
-  %input{"ng-model" => "yourName1", :placeholder => "Enter a name here", :type => "text"}/
-  %hr
-  %h1 Hello {{yourName1}}!
+%div{"ng-controller" => "ExampleCtrl"}
+  %p
+    Here is a small example on dynamic data with Angular, more info can be found at
+    %a{:href => "http://angularjs.org"} AngularJS.org
+  %div
+    %label Name:
+    %input{"ng-model" => "yourName1", :placeholder => "Enter a name here", :type => "text"}/
+    %hr
+    %h1 Hello {{yourName1}}!
