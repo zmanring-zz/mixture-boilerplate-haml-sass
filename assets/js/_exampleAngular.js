@@ -1,6 +1,6 @@
 var app = angular.module('MaxmediaApp', []);
 
-app.controller('ExampleCtrl', ['$scope', FirstCtrl]);
+app.controller('ExampleCtrl', ['$scope', ExampleCtrl]);
 
 function ExampleCtrl($scope) {
 
