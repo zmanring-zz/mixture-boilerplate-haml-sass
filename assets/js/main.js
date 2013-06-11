@@ -9607,8 +9607,6 @@ if ( typeof define === "function" && define.amd && define.amd.jQuery ) {
  * http://www.opensource.org/licenses/mit-license.php
 */
 
-/*jslint unparam: true, browser: true, indent: 2 */
-
 // Accommodate running jQuery or Zepto in noConflict() mode by
 // using an anonymous function to redefine the $ shorthand name.
 // See http://docs.jquery.com/Using_jQuery_with_Other_Libraries
@@ -9972,9 +9970,7 @@ if (typeof jQuery === "undefined" &&
 
 })(libFuncName);
 
-/*jslint unparam: true, browser: true, indent: 2 */
-
-;(function ($, window, document, undefined) {
+(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.alerts = {
@@ -10022,9 +10018,7 @@ if (typeof jQuery === "undefined" &&
     }
   };
 }(Foundation.zj, this, this.document));
-/*jslint unparam: true, browser: true, indent: 2 */
-
-;(function ($, window, document, undefined) {
+(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.clearing = {
@@ -10577,9 +10571,7 @@ if (typeof jQuery === "undefined" &&
   };
 
 })(Foundation.zj, document);
-/*jslint unparam: true, browser: true, indent: 2 */
-
-;(function ($, window, document, undefined) {
+(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.dropdown = {
@@ -10706,9 +10698,7 @@ if (typeof jQuery === "undefined" &&
   };
 }(Foundation.zj, this, this.document));
 
-/*jslint unparam: true, browser: true, indent: 2 */
-
-;(function ($, window, document, undefined) {
+(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.forms = {
@@ -11092,9 +11082,7 @@ if (typeof jQuery === "undefined" &&
     }
   };
 }(Foundation.zj, this, this.document));
-/*jslint unparam: true, browser: true, indent: 2 */
-
-;(function ($, window, document, undefined) {
+(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.joyride = {
@@ -11704,9 +11692,7 @@ if (typeof jQuery === "undefined" &&
     }
   };
 }(Foundation.zj, this, this.document));
-/*jslint unparam: true, browser: true, indent: 2 */
-
-;(function ($, window, document, undefined) {
+(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.magellan = {
@@ -11834,7 +11820,7 @@ if (typeof jQuery === "undefined" &&
     }
   };
 }(Foundation.zj, this, this.document));
-;(function ($, window, document, undefined) {
+(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs = Foundation.libs || {};
@@ -12203,7 +12189,7 @@ if (typeof jQuery === "undefined" &&
 /*! http://mths.be/placeholder v2.0.7 by @mathias 
 	Modified to work with Zepto.js by ZURB
 */
-;(function(window, document, $) {
+(function(window, document, $) {
 
 	var isInputSupported = 'placeholder' in document.createElement('input'),
 	    isTextareaSupported = 'placeholder' in document.createElement('textarea'),
@@ -12359,9 +12345,7 @@ if (typeof jQuery === "undefined" &&
 	}
 
 }(this, document, Foundation.zj));
-/*jslint unparam: true, browser: true, indent: 2 */
-
-;(function ($, window, document, undefined) {
+(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.reveal = {
@@ -12629,9 +12613,7 @@ if (typeof jQuery === "undefined" &&
     }
   };
 }(Foundation.zj, this, this.document));
-/*jslint unparam: true, browser: true, indent: 2 */
-
-;(function ($, window, document, undefined) {
+(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.section = {
@@ -12668,6 +12650,7 @@ if (typeof jQuery === "undefined" &&
         .on('click.fndtn.section', '[data-section] .title', function (e) {
           var $this = $(this),
               section = $this.closest('[data-section]');
+              console.log('click1');
 
           self.toggle_active.call(this, e, self);
         });
@@ -12690,6 +12673,7 @@ if (typeof jQuery === "undefined" &&
               .find('section, .section')
               .removeClass('active')
               .attr('style', '');
+              console.log('click2');
           }
         });
 
@@ -12901,9 +12885,7 @@ if (typeof jQuery === "undefined" &&
     }
   };
 }(Foundation.zj, this, this.document));
-/*jslint unparam: true, browser: true, indent: 2 */
-
-;(function ($, window, document, undefined) {
+(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.tooltips = {
@@ -13097,9 +13079,7 @@ if (typeof jQuery === "undefined" &&
   };
 }(Foundation.zj, this, this.document));
 
-/*jslint unparam: true, browser: true, indent: 2 */
-
-;(function ($, window, document, undefined) {
+(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.topbar = {
@@ -28178,3 +28158,5 @@ app.controller('ExampleCtrl', ['$scope', ExampleCtrl]);
 function ExampleCtrl($scope) {
 
 }
+
+ExampleCtrl.$inject = ['$scope'];
