@@ -3,7 +3,7 @@
 /[if IE 7 ]    <html class="ie7" lang="en">
 /[if IE 8 ]    <html class="ie8" lang="en">
 /[if IE 9 ]    <html class="ie9" lang="en">
-%html{"ng-app" => ""}
+%html{"ng-app" => "MaxmediaApp"}
 
   %head
     :Asseturl
@@ -17,3 +17,6 @@
 
     :Asseturl
       %script{:src => "main.js"}
+    %script
+      //Initialize Foundation
+      $(document).foundation();

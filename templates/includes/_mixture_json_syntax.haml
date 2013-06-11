@@ -39,14 +39,14 @@
 %p Using the following HAML:
 %pre.panel
   :preserve
-    %section.panel
+    %div.panel
       %p
         Our company name is &#35;{model["company_name"]}.
         A few of our departments are:
       &#45; for x in model["departments"]
         %p &#35;{x[1]}
 
-    %section.panel
+    %div.panel
       %p We are &#35;{global["company_name"]}, we are an
          &#35;{global["company_type"]}. We're located in
          &#35;{global["location"]["city"]},
@@ -75,12 +75,12 @@
       }
     }
 %p Will output the following:
-%section.panel
+%div.panel
   %p
     Our company name is #{model["company_name"]}.
     A few of our departments are:
   - for x in model["departments"]
     %p #{x[1]}
 
-%section.panel
+%div.panel
   %p We are #{global["company_name"]}, we are an #{global["company_type"]}. We're located in #{global["location"]["city"]}, #{global["location"]["state"]}.

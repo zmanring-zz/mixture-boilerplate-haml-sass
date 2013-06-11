@@ -11,8 +11,17 @@
   .large-8.columns
     %p This is a boilerplate for the Mixture site generation tool. It is pre-loaded with Haml and Sass for easy to read, quickly written HTML and CSS, and integrated with AngularJS for quickly defined dynamic data. Also included are Modernizr, Foundation, and JQuery.
     =render :links
-    =render :mixture_json_syntax
 
 .row
-  .large-4.columns
-    =render :ng_hello
+  .large-8.columns
+    %div.section-container.tabs{"data-section" => "tabs"}
+      %section
+        %p.title{"data-section-title" => ""}
+          %a{:href => "#mixJson"}Mixture JSON Syntax
+        %div.content{"data-section-content" => ""}
+          =render :mixture_json_syntax
+      %section
+        %p.title{"data-section-title" => ""}
+          %a{:href => "#angJS"}AngularJS
+        %div.content{"data-section-content" => ""}
+          =render :ng_hello

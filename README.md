@@ -48,14 +48,14 @@ If you call JSON objects in mixture directly from HAML you can ignore the `#{}`.
 Using the following HAML:
 
 ```
-%section.panel
+%div.panel
   %p
     Our company name is #{model["company_name"]}.
     A few of our departments are:
   - for x in model["departments"]
     %p #{x[1]}
 
-%section.panel
+%div.panel
   %p We are #{global["company_name"]}, we are an
      #{global["company_type"]}. We're located in
      #{global["location"]["city"]},

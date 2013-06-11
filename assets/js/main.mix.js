@@ -1,5 +1,7 @@
 @import "vendor/custom.modernizr.js";
+
 @import "vendor/jquery-1.9.1.js";
+
 @import "foundation/foundation.js";
 @import "foundation/foundation.alerts.js";
 @import "foundation/foundation.clearing.js";
@@ -14,6 +16,7 @@
 @import "foundation/foundation.section.js";
 @import "foundation/foundation.tooltips.js";
 @import "foundation/foundation.topbar.js";
+
 @import "vendor/angular.js";
 
 @import "exampleAngular";
