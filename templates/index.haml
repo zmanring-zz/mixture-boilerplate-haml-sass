@@ -12,22 +12,16 @@
     %p This is a boilerplate for the Mixture site generation tool. It is pre-loaded with Haml and Sass for easy to read, quickly written HTML and CSS, and integrated with AngularJS for quickly defined dynamic data. Also included are Modernizr, Foundation, and JQuery.
     =render :links
 
-%div.section-container{"data-section" => "tabs"}
-  %section
-    %p.title{"data-section-title" => ""}
-      %a{:href => "#"}Section 1
-    %div.content{"data-section-content" => ""}
-      %p Content of section 1
-  %section
-    %p.title{"data-section-title" => ""}
-      %a{:href => "#"}Section 2
-    %div.content{"data-section-content" => ""}
-      %p Content of section 2
-
 .row
   .large-8.columns
-    =render :mixture_json_syntax
-
-.row
-  .large-4.columns
-    =render :ng_hello
+    %div.section-container.tabs{"data-section" => "tabs"}
+      %section
+        %p.title{"data-section-title" => ""}
+          %a{:href => "#mixJson"}Mixture JSON Syntax
+        %div.content{"data-section-content" => ""}
+          =render :mixture_json_syntax
+      %section
+        %p.title{"data-section-title" => ""}
+          %a{:href => "#angJS"}AngularJS
+        %div.content{"data-section-content" => ""}
+          =render :ng_hello
