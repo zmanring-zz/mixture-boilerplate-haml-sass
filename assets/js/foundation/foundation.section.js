@@ -1,6 +1,4 @@
-/*jslint unparam: true, browser: true, indent: 2 */
-
-;(function ($, window, document, undefined) {
+(function ($, window, document, undefined) {
   'use strict';
 
   Foundation.libs.section = {
@@ -37,6 +35,7 @@
         .on('click.fndtn.section', '[data-section] .title', function (e) {
           var $this = $(this),
               section = $this.closest('[data-section]');
+              console.log('click1');
 
           self.toggle_active.call(this, e, self);
         });
@@ -59,6 +58,7 @@
               .find('section, .section')
               .removeClass('active')
               .attr('style', '');
+              console.log('click2');
           }
         });
 
