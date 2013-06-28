@@ -14,14 +14,15 @@
 
 .row
   .large-8.columns
-    %div.section-container.tabs{"data-section" => "tabs"}
+    %div.section-container.tabs{:data => {"section" => "tabs"}}
       %section
-        %p.title{"data-section-title" => ""}
-          %a{:href => "#mixJson"}Mixture JSON Syntax
-        %div.content{"data-section-content" => ""}
+        %p.title{:data => {:section_title => ""}}
+          %a{:href => "#mixJson"} Mixture JSON Syntax
+        %div.content{:data => {:section_content => ""}}
           =render :mixture_json_syntax
       %section
-        %p.title{"data-section-title" => ""}
-          %a{:href => "#angJS"}AngularJS
-        %div.content{"data-section-content" => ""}
+        %p.title{:data => {:section_title => ""}}
+          %a{:href => "#angJS"}
+            AngularJS
+        %div.content{:data => {:section_content => ""}}
           =render :ng_hello
